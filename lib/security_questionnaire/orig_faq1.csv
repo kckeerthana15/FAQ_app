@@ -1,0 +1,98 @@
+"Does your application perform data validation for inbound data to identify common attacks (e.g. SQL Injection, XSS)? Please describe.",Yes. The application is well tested against these common attacks through both internal & 3rd party penetration testing.
+Does your application perform data validation/filtering for outbound data to ensure that sensitive information (e.g. username or password) is not presented back to the end-user following data validation errors? Please describe.,"Yes, through internal penetration testing."
+Does your application perform both client-side and server-side data validation? Please describe.,"Yes, we provide both Server side validations(backend validations) as well as Client level validations(JS validations)"
+"Does your application employ encryption technologies to protect customer data during transit? Please describe. If SSL is used, what versions are supported?","Customer Information is secured both at rest and transit. Communication with Chronus Services is secured via a high-grade 2048-bit SSL encryption, and Data at REST is protected using AES 256 encryption.
+Versions above TLS 1.0 are supported."
+"Does your application support role-based access models for user access, with specific permissions assigned to each role?",Yes
+Does your application provide protection (encryption/hashing) for stored passwords and other sensitive data? Please describe.,"Yes, our application stores passwords in a MySQL database and they are hashed. (not applicable is Cystic Fibrosis opts for SSO in which case the application never stores any password)"
+"Does your application implement password enforcement policies, such as minimum length, complexity, expiration, and reuse restrictions? Please describe.","Yes, all password enforcement policies such as length, complexity, expiration, reuse resctrictions and IP restrictions can be configed by Cystic Fibrosis"
+Does your application have a password history functionality enabled such that passwords cannot be reused within a predefined period of time? Please describe.,Passwords cannot be reused for a certain number of predefined times on password reset/change.
+"Does your application implement user lockout after a certain number of failed authentication attempts? Please describe, including any limitations.",We can enable account lockout after a certain number of failed authentication attempts. It can be reactivated either automatically after a certain amount of predefined time or by sending an email to the user for reactivation.
+Does your application have the ability to integrate with LDAP (e.g. Active Directory) or other directory service for authentication and/or authorization?,Yes. LDAP based authentication is supported
+Does your application have the ability to integrate with federated single sign-on solutions/protocols (i.e. using SAML)?  Please describe.,"Yes, Chronus Mentor authentication supports Single Sign On (SSO) integration with services like CAS, Open SSL, SOAP and SAML 2.0."
+Does your organization have a formal Software Development Lifecycle (SDLC) program or methodology? Please describe.,"Yes, Please refer to Chronus system development process document for details.
+
+The application is developed using a rigorous System Development process which incorporates security in all the phases of system development including definition, design, development, validation and deployment.
+
+The following principles are followed as part of Chronus secure coding practice:
+Separation of duties, principle of least privilege, secure defaults, principle of defense in depth, Minimize attack surface area"
+Does your application enforce a session time-out and/or lockout that would be triggered after a pre-defined amount of user inactivity? Please describe the timeframe and whether it is configurable.,"Yes, the timeframe can be configurable from 15 mins to 3 hours"
+Does your application display a banner to end-users informing them that the application should only be accessed by authorized individuals? Please describe the banners and where they are implemented.,Content and its place can be customized by Cystic Fibrosis
+"Does your application implement user login/session functionality? If so, please describe the methods used to maintain a user's session (e.g. cookie, dynamic URL, hidden form field, etc.).","Yes, we use cookies to maintain user session"
+Does your application provide an audit trail linking users to specific data transactions? Please describe.,Activity and access logging is enabled by default on systems as part of compliance with secure baseline configuration and they include user information and date and time.
+Do the servers on which your applications run utilize anti-virus protection? Please describe.,"Yes, We  have an antivirus software at each critical information end point (firewalls, email servers) aand at each workstation and server. The software is configured to check all files automatically on access, downloads, and email. 
+We also Install updates to antivirus software and signature files everyday."
+Do you have a process for communicating application vulnerability information to your clients? Please describe.,"Yes, Chronus has a well defined Incident Response Policy."
+"Do you utilize Antivirus software on all employee desktops, laptops, and servers that are running the Windows operating system? Please describe.","Yes, We  have an antivirus software at each critical information end point (firewalls, email servers) and at each workstation and server. The software is configured to check all files automatically on access, downloads, and email. 
+We also Install updates to antivirus software and signature files everyday."
+Do you update your Antivirus signatures at least daily? Please describe.,"Yes, as described above"
+"Does it run on-access scans? That is, when someone logs on to a computer does it automatically start a scan? Please describe.","Yes, we run on-access scans. Whenever someone logs into a system, and if our intrusion detection system finds the access unauthorized, it immediately reports it to the appropriate team."
+Full system scans? How often? Please describe.,We do full system scans everyday
+Does your AV software include spyware detection and protection?,Yes
+Do you restrict administrative access to all desktops and laptops (including employee's)? Please describe.,"Yes, only the system admin has superadmin privileges to all the desktops and laptops used within the organization"
+Do you leverage Data-Loss Prevention (DLP) or Host-Based Intrusion Detection/Prevention (HIDS/HIPS) solutions? Please describe.,"Yes, All accesses and activities are pro-actively monitored by the Intrusion Detection System Activity and access logging is enabled by default on critical systems as part of compliance with secure baseline configuration. Logs from systems are consolidated on an ongoing basis in a centralized data store whose access is restricted only to Security auditors. Collected logs are analyzed and suspected activities are immediately reported and handled as security incidents according to Chronus Security Incident Report procedures."
+"Do you have documented standard security configurations (i.e. hardening standards) for each system type(Workstations, Servers, etc)? Please describe how these are managed (e.g. reviewed, modified, enforced, etc).",See above
+Are your systems configured to capture and log successful and failed user authentication (login) attempts and user authorization failures? Please describe.,"Yes, All authentication and authorization attempts(both success and failure attempts) are logged and stored periodically."
+Do you retain system log files for a specified period of time to assist in access control monitoring and security investigations? Please describe.,"Yes, Logs from systems are consolidated on an ongoing basis in a centralized data store for a period of 2 years."
+"Does your organization enforce strict change management controls (including appropriate review, approval, and testing) for changes to production applications and servers?","Every change to Chronus information systems is subject to Chronus Change Management policy as below:
+- A formal written change request must be submitted for both scheduled and unscheduled change.
+- Change request should indicate urgency of fix, include results of test performed, review comments for security implications and rollback procedures 
+- Change affecting access to information systems must be scheduled within the maintenance window agreed with the customers.
+- Each change request must receive formal approval from change management committee, information system owner and information system security officer before proceeding with the change.
+- Customer notification must be completed as appropriate.
+- Change Review must be completed whether successful or not.
+- Change Management Log must be maintained for all changes
+
+A Change Management Committee, appointed by Chronus Leadership, meets regularly to review change requests and to ensure that change reviews and communications are being satisfactorily performed."
+Does your organization have a formal Asset Management program? Please describe.,Yes.
+Does your organization maintain separate test and development facilities that are isolated from production facilities?,"Chronus maintains separate and distinct development, test and staging, quality assurance and production environments. Testing is carried out only with test data that is free of Cystic Fibrosis confidential information. Production data is never used in development, test and quality assurance environments."
+"Do you have documented processes for patch management to ensure that security-related patches (e.g. desktops, laptops, server OS, Database, Application, etc) for any system are addressed within a reasonable timeframe? Please describe.","Yes, Critical patches are applied within 24-48 hours. High priority patches are applied within 10 days. Rest of the patches are applied within 30 days."
+Do you have written policies/procedures/guidelines for maintaining and monitoring the security of customer data?,"yes, See Chronus Information Security Policy"
+"Do you employ encryption technologies or other controls to protect client data while stored on your information systems or desktop/laptops? Please describe the type of encryption (symmetric/asymmetric), encryption key standards (e.g. minimum key length), and how encryption keys are managed (keyring program, who has access, admin only, etc.)",Yes
+"Will Cystic Fibrosis data be co-mingled with data from other clients? Please describe the environment, and also the controls (logical or physical) that are employed to protect data confidentiality.","The following security architecture is used to achieve data isolation between different customers (tenants) 
+1. Filtering: Using an intermediary layer between a tenant and a data source that acts like a sieve, ensuring that data corresponding to that tenant is returned.
+2. Permissions: Using access control lists (ACLs) to determine who can access data in the application and what they can do with it.
+
+In addition to this Chronus also supports deployments based on private cloud with dedicated data server instances for data isolation(additional costs apply)"
+Do you provide data masking capabilities at the database level to obscure/replace sensitive data elements? Please describe.,"Yes, sensitive data is obfuscated for all the access requests, which were reviewed and approved by the Chronus Review Committee."
+"Do you employ additional security controls (encryption, restricted access, etc.) for access to client data that contains Personally Identifiable Information (PII)? Please describe.","Chronus utilizes AES256 algorithm supported encryption of data at rest.
+Also, Chronus secures client data by using Two-factor authentication, AWS network Access control lists and security groups, thus securing the data completely.
+
+Access is granted to specific individuals only for compelling operational needs and during emergencies. Access requests are reviewed, approved and audited by the Information Security Administrator and Director of Operations. Separation of duties and principle of least privilege criteria are applied. Review includes the script and tools to be used during the access. Access is allowed via two-factor authentication and is encrypted."
+What secure data transfer methods does your organization support? Can you support SFTP with PGP encryption?,Yes
+Do you regularly backup client data?,Yes
+" Is it encypted, archived, and reviewed for completeness?",Yes
+ Are these stored off-site? ,Yes
+ Are there procedures in place for the disposal of client data? Explain,"Yes, In the event a customer chooses to either terminate or not renew the Chronus Mentor Services Agreement, customer will be notified to save the necessary data. Access to program will be disabled and the data will be deleted from Chronus servers after receiving an official confirmation that customer has saved the necessary data. Typically, this activity need to be completed within 30 days of terminating the agreement or earlier. Note that there is no recovery option once the data has been deleted. Residual copies of deleted data may remain on backup media and this data disappears as old backup media gets overwritten with newer backups. Read/writable media (e.g. AWS storage volumes) are securely disposed by performing DoD 5220.22-M secure wipe using scrub. All the data will be deleted in 90 days of inactivity."
+What are the schedules for these processes?,Refer above
+Will your organization process or store Cystic Fibrosis data?,Yes
+Will your organization operate or host Cystic Fibrosis applications?,No
+Will your organization operate or host an application for use by Cystic Fibrosis?,No
+Will your organization install or service Cystic Fibrosis applications or systems?,No
+Will your organization have access to Cystic Fibrosis employee or customer PII data?,No
+Will your organization have physical access to secured Cystic Fibrosis computer facilities?,No
+Will your organization have network access to Cystic Fibrosis computer facilities?,No
+Will your organization transmit files to or from Cystic Fibrosis?,No
+"Does your organization utilize a third party for infrastructure (or other) hosting related to delivery of your product or service? If so, please identify all relevant third parties and the type of hosting. If some responses in this questionnaire will be provided by the third party, please include identifying information with those responses.",Chronus is hosted on Amazon Web Services (AWS). 
+Do you have a documented internal privacy policy?  ,Yes
+Have all staff and/or subcontractors who will have access to or process any CFF sensitive data received the privacy policy?,Yes
+Do you have an individual leader or a group that has been designated as in charge of privacy?,Yes
+"Is there formal privacy training for employees, subcontractors, and other parties with any access to sensitive information?",Yes
+"Is there a formal process to identify, monitor, understand and ensure compliance with any applicable privacy legal or regulatory obligations (e.g., TCPA, CAN SPAM, etc.)?",Yes
+Do you have the ability to provide a privacy notice to individuals from whom you are collecting sensitive information on behalf of CFF?,Yes
+"Do you have the ability to provide and record consent (i.e., opt-out or opt-in) from individuals from whom you are collecting sensitive information or sending messages (e.g., emails, text messages, etc.) on behalf of CFF?",Yes
+Are there controls in place to ensure that the accuracy and completeness of sensitive information is maintained throughout any processing performed by your company?,Yes
+Are there any staff or subcontractors who receive or have access to CFF sensitive information from outside of the United States?,"All our subcontractors are based in United States only. Some of our technical staff are present in India. These employees do not have access to systems containing Customer data and production environments Access to such environments is granted to specific individuals only for compelling operational needs and during emergencies. Access requests are reviewed, approved and audited by the Information Security Administrator and Director of Operations. Review includes the script and tools to be used during the access. All accesses are pro-actively monitored by the Intrusion Detection System. Access is revoked as soon as the purpose for access is accomplished."
+"If so, from where (province, country)?",India
+"If there is cross border data transfer or access, have the applicable legal requirements been identified and compliance with those requirements documented?",Yes
+Are there standard processes in place to ensure the secure and permanent disposal of CFF sensitive information as directed?,Yes
+Are there appropriate representations and warranties in contracts with any subcontractors who will have access to sensitive information to ensure the subcontractor has committed to meet and comply with:,
+specified mandatory security controls?,Yes
+restrictions on the use of sensitive information and any other data only for those purposes specified by CFF?,Yes
+Is there a process in place that would ensure that you can provide prompt notification to CFF in the event of a known or suspected incident that involves the: ,
+unauthorized access to sensitive information?,Yes
+unauthorized use of sensitive information?,Yes
+theft of sensitive information?,Yes
+loss of sensitive information?,Yes
+Is there a defined and formal process for responding to a privacy incident?,Yes
+Is there insurance coverage for privacy breaches?,Yes
