@@ -1,5 +1,3 @@
-require 'csv'
-
 class CsvDatabaseOperations
 
 	def self.export_to_db(question, answer)

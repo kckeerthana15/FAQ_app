@@ -1,4 +1,5 @@
 class GetInputFaqs
+
 	def self.get_from_directory
     all_files = (Dir.glob("temp/input/*.csv"))
 		all_xl_files = (Dir.glob("temp/input/*.xlsx"))
@@ -9,4 +10,5 @@ class GetInputFaqs
     end
     return all_files
 	end
+  
 end

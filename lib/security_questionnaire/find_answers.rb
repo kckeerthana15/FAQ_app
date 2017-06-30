@@ -1,7 +1,3 @@
-require './lib/security_questionnaire/similarity_matrix.rb'
-require './lib/security_questionnaire/write_to_csv.rb'
-require './lib/security_questionnaire/csv_database_operations.rb'
-
 class FindAnswers
 
   def self.calculate_values_per_file(questions)
@@ -14,12 +10,11 @@ class FindAnswers
 
   def self.similarity_hash
     mid_index = SimilarityMatrix.get_ori_doc_size
-    end_index = @@documents.size - 1
-    @@in_index = mid_index + @@counter
+    in_index = mid_index + @@counter
     sim_hash = Hash.new
     @@documents.each_with_index do |doc1, index1|
-      if index1 < @@in_index
-         similarity = @@similarity_matrix[@@in_index, index1]
+      if index1 < in_index
+         similarity = @@similarity_matrix[in_index, index1]
          sim_hash[index1]=similarity
       end
     end
@@ -34,15 +29,15 @@ class FindAnswers
 
   def self.print_qa
     v = self.get_answers
-    in_index = SimilarityMatrix.get_ori_doc_size
     temp_array = Array.new
-    i = 1
     relevant_answers = Hash.new
+    in_index = SimilarityMatrix.get_ori_doc_size
+    i = 1
     v.each do |k,v|
       next if k >= in_index
         if (k%2==0)
           ques = @@col_data[k]
-          if @@col_data[k+1].downcase.eql?("see above") || @@col_data[k+1].downcase.eql?("refer above")
+          if @@col_data[k+1].downcase.include?("see above") || @@col_data[k+1].downcase.include?("refer above") #changed eql to include paychex,66,ans 4
             ans = @@col_data[k-1]
           else
             ans = @@col_data[k+1]
@@ -54,6 +49,24 @@ class FindAnswers
         end
         temp_array << ques
         temp_array << ans
+       
+
+        # ques_arr = Array.new
+        # ans_arr = Array.new
+        # relevant_answers.each do |k,v|
+        # #       if v.first.include?(ques) or v.last.include?(ans) 
+        #         ques_arr = relevant_answers.collect {|k,v| v.first}
+        #         ans_arr = relevant_answers.collect {|k,v| v.last}
+        #         #puts ques_arr
+        #         #puts ans_arr.class
+        # end
+        # if !ques_arr.any? { |s| s.include?(ques) } and !ans_arr.any? { |a| a.include?(ans)}
+        #         relevant_answers[i] = [ques,ans]
+        #         i = i + 1
+        # end
+
+
+
         unless relevant_answers.has_value?(temp_array)
           relevant_answers[i]=[ques, ans]
           i = i+1  
@@ -67,7 +80,4 @@ class FindAnswers
     return relevant_answers
   end
 
-  def self.get_col_data
-    return @@col_data
-  end
 end

@@ -1,0 +1,61 @@
+"Do you have perimeter protection around your entire network? If so, please describe that protection."
+When was your last 3rd party security assessment of your systems/networks/applications?
+"Please describe any recent assessments and what they covered (e.g. vulnerability assessments, penetration tests, web application tests)"
+Who did those assessments?
+How often do you have these assessments?
+"Is your system wholly hosted offsite, or would any portion of your service require a network presence on GW’s networks?"
+"Please indicate which of the following methods of access for your service apply
+a) Access to/from specific GW servers
+b) Access from users from GW networks
+c) Access from users on the internet – Chronus access"
+"What types of connections to GW networks might your systems need (e.g. authentication/authorization against GW directories, file transfers, remote desktop access, VPN access)"
+Provide an overview of your patch management policy and procedures.
+"How does your organization apply security related patches for the OS and other underlying software such as Adobe Reader, Java, Flash that are required to support your product?"
+How does your organization apply security related patches for custom code and services developed by your organization?
+"Describe your security patch window (the length of the average window between when patches are released and when they are applied to production systems), and address any policies/processes that you have for exempting security patches due to adverse effects on your software. Please provide criteria/metrics if possible (e.g. “we target application of critical Microsoft patches within one week of release and 90% of all critical Microsoft patches are applied within that window”)."
+Please describe your security incident response process
+a) Please summarize your incident response process
+b) How and when GW would be notified in the event of a potential or confirmed incident?
+"What is the typical turn-around time between when a potential incident is discovered and when the incident is fully resolved? (Note that this question is about time until final resolution, and NOT about time until incident response begins. We understand that time until final resolution may vary greatly; if necessary, provide the range of times within which 90% of incidents are resolved)."
+d) When was your last security incident?
+Have you ever had confirmed data loss from a security incident?
+Please describe your intrusion detection process as well as other security monitoring processes you may have
+"Please describe your process for proactively checking the Internet for potential data leaks (e.g. searching file-sharing sites for customer data, seeding data with honeytokens etc.)"
+"Do you have dedicated information security personnel on staff? If so, how many and what are their roles?"
+"What training or certification has your staff been trained or certified in network security, application security, and/or social engineering awareness?"
+"What types of GW data will be used by or stored in this system? (e.g. staff names, student email addresses, Excel spreadsheets containing research data)"
+Will GW’s data be encrypted while stored on your network?
+Who will have access to GW’s data?
+a) Have those persons had background checks?
+Where (logically and/or physically) will GW’s data be stored?
+"a) How is GW’s data segregated from that of other customers? In particular, please note whether any of GW’s data will be stored on the same filesystem (for file-based storage) or in the same database instance (for DB-based storage) as the data of other customers."
+Please provide a summary of the process for transmission and storage of GW’s data
+"With regards to all parts of your service that may transmit, process, and/or store GW data, approximately what portion of the codebase for those systems uses custom-developed (i.e. non-COTS) code?"
+"Please provide a summary of the components that use custom- developed code (e.g. front-end UI, backend database, file transfer system)"
+"For any custom-developed code, have your developers been trained in secure coding practices? If so, what training have they received and what security models do they use?"
+Please also complete the GW Secure Coding Standards questionnaire and return it with this form.
+When was the last code review of your custom-developed code that included review of secure coding practices?
+Please describe any recent code reviews and what they covered.
+Who did those reviews?
+How often do you have these assessments?
+"Please provide a list and descriptions of your compliance status with relevant industry standard and / or regulatory requirements that may be applicable (such as; SAS 70, SSAE 16, PCI DSS, PA DSS, FISMA, FedRAMP, HIPAA, ISO 27001 etc.) for this deployment."
+"If requested, would you be able to provide supporting documentation to your assertions in the previous question?"
+Do you have a written Business Continuity/Disaster Recovery (BC/DR) plan?
+Are you able to provide GW w/ copies of your BC/DR plan?
+When was the last time your BC/DR plan was validated/audited by a third party?
+a) Who did that validation?
+Are you able to provide GW with copies of your BC/DR audit report?
+"Please give a high-level summary of your BC/DR program, including a summary of your BC/DR policy, summaries of your program governance and maintenance plans, and where in your organizational hierarchy BC/DR is managed."
+What are the RTOs/RPOs for the systems housing GW data?
+How often are recovery exercises performed?
+Do recovery exercises involve outside observers?
+When was the last time your BC/DR plan was tested?
+a) Please note the types of exercises performed.
+b) Did recovery occur within the specified RTOs/RPOs?
+"c) If possible, please attach report from latest recovery exercise."
+Is all GW data replicated to an off-site location?
+"If so, to where is it replicated, how is replication handled, and how frequently?"
+Who has access to that replicated data?
+Has a full restore ever been successfully performed from the off-site backup?
+"What notification is delivered, should a BC/DR incident occur?"
+"Have you experienced an actual BC/DR disaster? If so, how did your BC/DR plan work in practice?"

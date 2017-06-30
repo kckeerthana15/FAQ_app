@@ -1,0 +1,68 @@
+"Describe the service you are providing to Paychex, Inc."
+"Do you have a Data Flow Diagram associated with the service? If yes, please provide a copy."
+"Does your company receive or exchange Paychex, Inc. confidential information?"
+"Will your company have access to Paychex networks, systems or applications in-house or remotely?"
+"Are all data interfaces associated with Paychex, Inc. Services defined and documented?"
+"Describe the data interfaces identifying how the information is sent to or received by you – ie E-mail, FTP, SFTP, VPN, USPS or similar service, etc."
+"Describe how often your company receives Paychex, Inc. information including estimated volumes."
+Indicate how long your company retains the information.
+"Are subcontractors used related to the services provided that have access to Paychex, Inc.confidential information (e.g., data center, business continuity, cleaning, shredding, and other specific services)?"
+Do your contracts with third parties incorporate relevant elements of the information security policy requirements
+"Do you have SLAs or contracts in place with business partners, vendors, customers, etc. That document security responsibilities and liabilities in case of a security incident/breach?"
+"Is there a documented process in place to screen your outside contractors such as security guards, janitorial services, etc.?"
+"Do you have formal and documented security policies, standards, plans and procedures?"
+Does your company have a written data privacy policy?
+"For each of the following, indicate if you have corresponding written policies / standards and the date of most recent management review: "
+Information classification policy
+Data-handling policy
+Internet/intranet access and use policy
+Email use policy &  email retention policy
+Encryption policy and standards
+Security incident management policy
+Personnel security and termination policies
+Policies for managing external communication devices and removable media
+Are security policies and standards communicated to the staff?
+Are consequences for non-compliance with policies clearly documented?
+"Do the security policies apply to contract employees (offsite and onsite), dependent Service Providers, etc.?"
+"Is a separation of duties enforced among individuals who develop program code, authorize program code for use, and install program code?"
+"Is a separation of duties enforced among individuals who request access, authorize access, and enable access?"
+Is the adoption of the policy monitored?
+Has your company had an independent control environment review
+"If Yes, has this review been completed in the last 12 months?"
+When was the last time you had a penetration test performed?
+Describe the location of the Data Center used for providing this service.
+Is the Data Center used for this service outsourced?
+"Is access to areas where work is performed for Paychex, Inc. physically separated from that of other clients?"
+"Has a clear desk, clear screen policy been implemented to protect information in shared environments?"
+"Describe the process for granting and documenting system access, including access for third parties and remote access?"
+Describe the process used to remove or alter access permissions for terminated or transferred users.
+"Are precautions taken to prevent removing Paychex, Inc. information or related assets from the premises?"
+"Does the decommissioning process for equipment that housed, stored, processed, controlled or accessed Paychex, Inc. information include procedures for the removal of Paychex, Inc. information prior to decommissioning?"
+"Are all read/writeable devices controlled at the desktop (e.g.. IPODs, CD burners, DVD, zip drives, USB drives)? Describe how these devices are controlled (e.g., diskless workstations are deployed)."
+"Is each User granted physical or logical access to the systems handling to Paychex, Inc. Information identified with a unique User ID and personal proof of identify (i.e. password, photo ID etc.)?"
+"Are applications at the desktop restricted from sending Paychex, Inc. confidential information over the internet?"
+"Are there restrictions that prevent Paychex, Inc. confidential data from being sent externally through e-mail?"
+"Is Paychex, Inc. confidential data sent, received, stored, or processed on portable electronic devices?"
+Is encryption used for wireless transmissions?
+"Are there controls that restrict the use of portable devices for receiving /sending/storing Paychex, Inc. related information?"
+"Is there a restriction from storing any Paychex, Inc. confidential data on the desktop or laptops?"
+Are laptops encrypted?
+"Is encryption used for removable storage devices (e.g., flash drives, CD, DVD, USB devices)?"
+"Is Paychex, Inc. confidential information encrypted in system and network storage?"
+Do you have a documented security incident response process?
+Does your security incident response process address gathering of evidence and documentation as well as chain of custody protection?
+Are incidents associated with media containing confidential records within the scope of the security incident response process?
+Are security incidents associated with end-user devices within the scope of the security incident response process?
+"Are incidents tracked, and communicated to Paychex, Inc.?"
+"Is a website used associated with the Paychex, Inc. Services?"
+"Is the website used to collect Paychex, Inc. confidential information, or permit financial transactions?"
+"Is TLS encryption used for web transactions containing Paychex, Inc. confidential data? If so, please provide the version. If TLS in not used, please provide the type of encryption utilized."
+"Does your company retain a copy of Paychex, Inc. confidential data for Resiliency, Backup or Recovery purposes?"
+"Is backup media containing Paychex, Inc. Confidential data encrypted?"
+"Is backup media containing Paychex, Inc. Confidential data stored in a locked container during transport"
+"If you store information at an off-site facility, do you utilize insured (e.g., bonded) carrier services to transfer information to and from the offsite location?"
+"Are all backup media - onsite, offsite, full and/or incremental, rendered unreadable at the end of their useful life?"
+Are procedures in place to fully destroy data contained on back-up media before they are reused?
+"Are procedures employed to ensure compliance with privacy laws/regulation requirements related to maintaining security, confidentiality and protection of Paychex, Inc. related activities)?"
+"Is the identity and background of all your staff servicing Paychex, Inc. known based on security background checks ?"
+Do employees sign a non-disclosure or confidentiality agreement?

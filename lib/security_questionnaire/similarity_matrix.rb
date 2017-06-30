@@ -1,7 +1,5 @@
-require 'similarity'
-require './lib/security_questionnaire/csv_database_operations.rb'
-
 class SimilarityMatrix
+  
   def self.get_stored_corpus
     corpus = Corpus.new
     col_data = CsvDatabaseOperations.import_from_db
