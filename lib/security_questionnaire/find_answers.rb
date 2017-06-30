@@ -49,24 +49,6 @@ class FindAnswers
         end
         temp_array << ques
         temp_array << ans
-       
-
-        # ques_arr = Array.new
-        # ans_arr = Array.new
-        # relevant_answers.each do |k,v|
-        # #       if v.first.include?(ques) or v.last.include?(ans) 
-        #         ques_arr = relevant_answers.collect {|k,v| v.first}
-        #         ans_arr = relevant_answers.collect {|k,v| v.last}
-        #         #puts ques_arr
-        #         #puts ans_arr.class
-        # end
-        # if !ques_arr.any? { |s| s.include?(ques) } and !ans_arr.any? { |a| a.include?(ans)}
-        #         relevant_answers[i] = [ques,ans]
-        #         i = i + 1
-        # end
-
-
-
         unless relevant_answers.has_value?(temp_array)
           relevant_answers[i]=[ques, ans]
           i = i+1  
