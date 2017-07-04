@@ -23,7 +23,9 @@ class CsvDatabaseOperations
   end
 
   def self.add_entry_to_db(question, answer)
-    SecurityQuestionnaire.create(question: question, answer: answer)
+    if !answer.downcase.eql?("yes") and !answer.downcase.eql?("no")
+      SecurityQuestionnaire.create(question: question, answer: answer)
+    end
   end
 
   def self.populate_db(filename)
