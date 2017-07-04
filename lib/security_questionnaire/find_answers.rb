@@ -1,11 +1,13 @@
 class FindAnswers
 
-  def self.calculate_values_per_file(questions)
+  def self.calculate_values_per_file(questions, number_of_answers)
+    @@number_of_columns = number_of_answers
     @@counter = 0
     @@col_data = CsvDatabaseOperations.import_from_db
     @@similarity_matrix = SimilarityMatrix.get_similarity_matrix(questions)
     @@documents = SimilarityMatrix.get_document_obj_from_corpus(questions)
     WriteToCsv.calculate_time
+    WriteToCsv.fill_headers(number_of_answers)
   end
 
   def self.similarity_hash
@@ -15,7 +17,7 @@ class FindAnswers
     @@documents.each_with_index do |doc1, index1|
       if index1 < in_index
          similarity = @@similarity_matrix[in_index, index1]
-         sim_hash[index1]=similarity
+         sim_hash[index1] = similarity
       end
     end
     return sim_hash
@@ -54,7 +56,7 @@ class FindAnswers
           i = i+1  
         end
         temp_array.clear
-        if i==5
+        if i > @@number_of_columns.to_i
           break
         end
       end

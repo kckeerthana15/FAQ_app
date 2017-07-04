@@ -1,7 +1,6 @@
-require './lib/security_questionnaire/filling_questionnaire.rb'
 namespace :filling_questionnaire do
 	desc "Fills in customer questionnaires"
-	task :fill => :environment do
-		FillingQuestionnaire.fill
+	task :fill, [:number_of_answers] => :environment do |t, args|
+		FillingQuestionnaire.fill(args[:number_of_answers])
 	end
 end

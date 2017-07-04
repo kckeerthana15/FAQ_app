@@ -6,9 +6,10 @@ require './lib/security_questionnaire/similarity_matrix.rb'
 
 class FillingQuestionnaire
   
-  def self.fill
-    Dir.chdir("lib/security_questionnaire")
-    #CsvDatabaseOperations.populate_db("OriginalTestDataSet_Ori_faq1.csv")
+  def self.fill(number_of_answers)
+    if number_of_answers.to_i.zero?
+      number_of_answers = 4
+    end
     files = GetInputFaqs.get_from_directory
     files.each do |file|
       if file.include?".xlsx"
@@ -21,7 +22,7 @@ class FillingQuestionnaire
        next if row[0].nil?
        questions << row[0]
       end
-      FindAnswers.calculate_values_per_file(questions)
+      FindAnswers.calculate_values_per_file(questions, number_of_answers)
       questions.each do |ques|
         WriteToCsv.write_new_qa(ques)
       end

@@ -1,6 +1,0 @@
-What timeframes are defined in the plans for recovery of business processing?(In hours),"2 hours
-"
-"If applicable, describe the bidder’s data backup and data replication strategies.",Yes
-Does your solution provide results report templates (variety of report types against measurement criteria)?,"Chronus Mentor service handling Customer data will be hosted in AWS Virtual Private Cloud which is protected using advanced security features of AWS such as security groups (aka firewalls) and network access control lists. Inbound and outbound traffic filtering is done at both server and subnet level. Only HTTPS, HTTP, SSH and SMTP protocols will be enabled appropriately."
-Can reports be scheduled for recurring distribution?,N/A
-How do you store data?,Yes

@@ -1,6 +1,0 @@
-Will you be using “off-the-shelf” software packages?,Yes
-What is the distance between the primary data center supporting services required by Travelers and its backup data center?,The data is hosted on Amazon Web Services (AWS). The primary location is in Virginia with backup located in California.
-What is the bidder’s service recovery time objective?,"2 hours
-"
-Does the bidder maintain inventory of all deployed devices and software?,Yes
-Does the bidder’s computing environment incorporate a datacenter facility owned / operated by the bidder?,No
