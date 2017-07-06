@@ -1,8 +1,8 @@
-require './lib/security_questionnaire/get_input_faqs.rb'
-require './lib/security_questionnaire/write_to_csv.rb'
-require './lib/security_questionnaire/csv_database_operations.rb'
-require './lib/security_questionnaire/find_answers.rb'
-require './lib/security_questionnaire/similarity_matrix.rb'
+require_relative 'get_input_faqs.rb'
+require_relative 'write_to_csv.rb'
+require_relative 'csv_database_operations.rb'
+require_relative 'find_answers.rb'
+require_relative 'similarity_matrix.rb'
 
 class FillingQuestionnaire
   

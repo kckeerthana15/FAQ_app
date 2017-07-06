@@ -1,5 +1,7 @@
+require 'similarity'
+require 'csv_database_operations'
+
 class SimilarityMatrix
-  
   def self.get_stored_corpus
     corpus = Corpus.new
     col_data = CsvDatabaseOperations.import_from_db

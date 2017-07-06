@@ -23,8 +23,16 @@ class CsvDatabaseOperations
   end
 
   def self.add_entry_to_db(question, answer)
-    if !answer.downcase.eql?("yes") and !answer.downcase.eql?("no")
-      SecurityQuestionnaire.create(question: question, answer: answer)
+    col_data = []
+    col_data = import_from_db
+    if !question.to_s.blank? and !answer.to_s.blank?
+      if !answer.downcase.eql?("yes") and !answer.downcase.eql?("no")
+          found_ques = (SecurityQuestionnaire.find_by(:question => question))
+          found_ans = (SecurityQuestionnaire.find_by(:answer => answer))
+        if found_ques.to_s.blank? or found_ans.to_s.blank?
+            SecurityQuestionnaire.create(question: question, answer: answer)
+        end
+      end
     end
   end
 
